@@ -14,7 +14,8 @@ CLASSES = \
         OriginalFilter.java\
         GrayscaleFilter.java\
         ColorIsoFilter.java\
-        SepiaFilter.java
+        SepiaFilter.java\
+        NegativeFilter.java
 
 default: classes
 

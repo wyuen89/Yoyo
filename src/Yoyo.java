@@ -53,6 +53,11 @@ class Yoyo{
 					filterNum++;
 					break;
 
+				case "-n":
+					filter = new NegativeFilter();
+					filterNum++;
+					break;
+
 				default:
 					if(file == null){
 						file = args[i];
@@ -109,12 +114,13 @@ class Yoyo{
 	}
 
 	private static void printUsage(){
-		System.out.print("Usage: [-r | -b] [-g | -i colorHex | -s] input_file [output_file_name]\n" + 
+		System.out.print("Usage: [-r | -b] [-g | -i colorHex | -s | -n] input_file [output_file_name]\n" + 
 			"\t-r: Reverse\n" +
 			"\t-b: Boomerang\n" +
 			"\t-g: Grayscale\n" +
 			"\t-i colorHex: Isolate color given as hexidecimal\n" +
 			"\t-s: Sepia\n" +
+			"\t-n: Negative\n" +
 			"\tinput_file: GIF file input\n" +
 			"\toutput_file_name: Desired output file name. Default is \"output.gif\"\n");
 	}
